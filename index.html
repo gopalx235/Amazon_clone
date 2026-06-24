@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <title>Amazon</title>
+ <link rel="icon" type="image/svg+xml" href="amazon_logo.svg">
+ <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+ <header>
+   <div class="navbar-top">
+     <div class="logo-container">
+   <a href="index.html">
+      <img class="amazon-logo" src="amazon_logo.svg" alt="amazon logo" style="margin-top:1px;">
+    </a>
+       </div>
+    <div class="location-container">
+       <img class="icon-location" src="icons/location.svg" alt="" style="margin-top:7px;">
+     <div class="location-text">
+       <div class="label-top">Deliver to</div>
+      <div class="label-bottom" style="margin-top:1px;">India</div>
+     </div>
+    </div>
+    <div class="search-container" style="height:34px; margin-left:10px;">
+      <select class="search-select">
+        <option>All</option>
+         <option>Books</option>
+         <option>Electronics</option>
+       </select>
+       <input type="text" id="search-input" class="search-input" placeholder="Search Amazon">
+       <button class="search-button" onclick="doSearch()">
+         <img class="icon-search" src="icons/search.svg" alt="search" style="position:relative; top:1px;">
+       </button>
+     </div>
+      <div class="language-container" style="margin-left:14px; margin-top:9px;">
+        <img class="icon-flag" src="icons/flag_in.svg" alt="india flag" style="width:21px;">
+       <span style="color: white; font-size: 11px; margin-left:2px; position:relative; top:1px;">IN</span>
+     </div>
+     <a href="signin.html" style="text-decoration:none;">
+     <div class="account-container" style="color: white; margin-left:21px; margin-top:6px;">
+       <div>Hello, sign in</div>
+       <div style="font-weight: bold; font-size: 12px; margin-top:2px;">Account &amp; Lists</div>
+     </div>
+     </a>
+      <a href="orders.html" style="text-decoration:none;">
+      <div class="orders-container" style="color: white; margin-left:5px;">
+       <div>Returns</div>
+       <div style="font-weight: bold; font-size:12px;">&amp; Orders</div>
+     </div>
+     </a>
+     <a href="cart.html" style="text-decoration:none;">
+     <div class="cart-container" style="margin-left:15px;">
+       <img class="icon-cart" src="icons/cart.svg" alt="cart" style="margin-top:3px;">
+       <span class="cart-count">0</span>
+        <span style="color: white; font-size: 12px; font-weight: bold; margin-left:3px; position:relative; top:2px;">Cart</span>
+     </div>
+     </a>
+   </div>
+   <div class="navbar-sub" style="gap:17px; padding-left:9px;">
+     <span class="sub-menu" style="margin-right:3px;">&#9776; All</span>
+     <a href="deals.html" class="sub-link">Today's Deals</a>
+     <a href="help.html" class="sub-link" style="margin-left:2px;">Customer Service</a>
+     <a href="fashion.html" class="sub-link">Registry</a>
+      <a href="electronics.html" class="sub-link" style="margin-left:-1px;">Gift Cards</a>
+     <a href="gaming.html" class="sub-link" style="margin-left:4px;">Sell</a>
+   </div>
+ </header>
+ <br>
+  <main>
+    <div class="hero-container">
+   <div class="slides">
+ <img class="slide" src="images/619geyiQI5L._SX3000_.jpg" alt="banner1">
+   <img class="slide" src="images/61Yx5-N155L._SX3000_.jpg" alt="banner2" style="display:none;">
+    <img class="slide" src="images/71QcgptqadL._SX3000_.jpg" alt="banner3" style="display:none;">
+      <img class="slide" src="images/71qcoYgEhzL._SX3000_.jpg" alt="banner4" style="display:none;">
+   </div>
+   <button class="slider-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="slider-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+  <div class="product-grid">
+    <div class="card clickable-card" style="min-height: 420px;" onclick="window.location.href='gaming.html'">
+   <h3 style="font-size:16px;">Get your game on</h3>
+   <div class="card-img-container">
+     <img src="images/Fuji_Gaming_SingleImageCard_C-1._SY304_CB762596570_.jpg" alt="gaming">
+   </div>
+    <a href="product.html?id=1" class="card-link" onclick="event.stopPropagation()">Shop gaming</a>
+     </div>
+    <div class="card clickable-card" onclick="window.location.href='fashion.html'">
+  <h3>Shop Fashion for less</h3>
+    <div class="quad-grid">
+      <div class="quad-item">
+        <img src="images/DQC_APR_TBYB_W_TOPS_1x._SY116_CB623353881_.jpg" alt="tops">
+        <span>Tops</span>
+      </div>
+      <div class="quad-item">
+        <img src="images/DQC_APR_TBYB_W_DRESSES_1x._SY116_CB623353881_.jpg" alt="dresses">
+        <span>Dresses</span>
+      </div>
+      <div class="quad-item">
+        <img src="images/DQC_APR_TBYB_W_BOTTOMS_1x._SY116_CB624172947_.jpg" alt="bottoms">
+        <span>Bottoms</span>
+      </div>
+      <div class="quad-item">
+        <img src="images/DQC_APR_TBYB_W_SHOES_1x._SY116_CB624172947_.jpg" alt="shoes">
+        <span>Shoes</span>
+      </div>
+    </div>
+   <a href="fashion.html" class="card-link" onclick="event.stopPropagation()">See all deals</a>
+     </div>
+   <div class="card clickable-card" onclick="window.location.href='product.html?id=11'">
+     <h3>New home arrivals</h3>
+     <div class="quad-grid">
+       <div class="quad-item">
+         <img src="images/Home_Flip_Summer_2024_315_HP_NewArrivals_QuadCard_D_01_1x._SY116_CB555960040_.jpg" alt="">
+         <span>Kitchen</span>
+       </div>
+       <div class="quad-item">
+         <img src="images/Home_Flip_Summer_2024_316_HP_NewArrivals_QuadCard_D_02_1x._SY116_CB555960040_.jpg" alt="">
+         <span>Improvement</span>
+       </div>
+       <div class="quad-item">
+         <img src="images/Home_Flip_Summer_2024_317_HP_NewArrivals_QuadCard_D_03_1x._SY116_CB555960040_.jpg" alt="">
+         <span>Decor</span>
+       </div>
+       <div class="quad-item">
+         <img src="images/Home_Flip_Summer_2024_318_HP_NewArrivals_QuadCard_D_04_1x._SY116_CB555960040_.jpg" alt="">
+         <span>Bedding</span>
+       </div>
+     </div>
+     <a href="product.html?id=7" class="card-link" onclick="event.stopPropagation()">Shop now</a>
+   </div>
+    <div class="card clickable-card" onclick="window.location.href='deals.html'">
+      <h3>Refresh your space</h3>
+      <div class="quad-grid">
+        <div class="quad-item">
+          <img src="images/2023Q2_GW_EE_AccentFurniture_D_Quad_186x116._SY116_CB594237035_.jpg" alt="">
+          <span>Furniture</span>
+        </div>
+        <div class="quad-item">
+          <img src="images/2023Q2_GW_EE_Kitchen_D_Quad_186x116._SY116_CB594237035_.jpg" alt="">
+          <span>Kitchen</span>
+        </div>
+        <div class="quad-item">
+          <img src="images/2023Q2_GW_EE_LaundryLuxe_D_Quad_186x116._SY116_CB594237035_.jpg" alt="">
+          <span>Laundry</span>
+        </div>
+        <div class="quad-item">
+          <img src="images/2023Q2_GW_EE_Hallway_D_Quad_186x116._SY116_CB594237035_.jpg" alt="">
+          <span>Decor</span>
+        </div>
+      </div>
+      <a href="deals.html" class="card-link" onclick="event.stopPropagation()">Explore more</a>
+    </div>
+  </div>
+  <br><br>
+  <div class="slider-container" style="margin-left: 28px; margin-right: 18px;">
+    <h3>Best Sellers in Home &amp; Kitchen</h3>
+    <div class="slider-items">
+      <img src="images/51IKhgxg03L._AC_SY200_.jpg" alt="">
+      <img src="images/61CEwh+UVuL._AC_SY200_.jpg" alt="">
+      <img src="images/61Gvw0-b0eL._AC_SY200_.jpg" alt="">
+      <img src="images/61UEXxKIlrL._AC_SY200_.jpg" alt="">
+      <img src="images/61o6SkL3DOL._AC_SY200_.jpg" alt="">
+      <img src="images/61qm+2koyBL._AC_SY200_.jpg" alt="">
+      <img src="images/61s+DOVawZL._AC_SY200_.jpg" alt="">
+      <img src="images/7194yVwYXFL._AC_SY200_.jpg" alt="">
+      <img src="images/71Si2QlAb3L._AC_SY200_.jpg" alt="">
+      <img src="images/71kHwy9jklL._AC_SY200_.jpg" alt="">
+      <img src="images/71lylM-9P4L._AC_SY200_.jpg" alt="">
+      <img src="images/71oERUaDzWL._AC_SY200_.jpg" alt="">
+      <img src="images/81331aSHcAL._AC_SY200_.jpg" alt="">
+    </div>
+  </div>
+  <br>
+  <div class="product-grid" style="margin-left: 42px; margin-right: 8px; gap: 14px; margin-top: 18px;">
+    <div class="card clickable-card" onclick="window.location.href='deals.html'">
+   <h3>Shop Father's Day deals</h3>
+    <div class="quad-grid">
+      <div class="quad-item">
+        <img src="images/AIS_FDay_2026_02_Fday_01_Muse_Prod_melody_homepage_372x232_1X._SY116_CB780692195_.jpg" alt="">
+        <span>Gifts</span>
+      </div>
+      <div class="quad-item">
+        <img src="images/AIS_FDay_2026_02_Fday_03_Muse_Prod_melody_homepage_372x232_1X._SY116_CB780692223_.jpg" alt="">
+        <span>Gadgets</span>
+      </div>
+      <div class="quad-item">
+        <img src="images/AIS_FDay_2026_02_Fday_05_Muse_Prod_melody_homepage_372x232_1X._SY116_CB780692213_.jpg" alt="">
+        <span>Apparel</span>
+      </div>
+      <div class="quad-item">
+        <img src="images/AIS_FDay_2026_02_Fday_07_Muse_Prod_melody_homepage_372x232_1X._SY116_CB780692172_.jpg" alt="">
+        <span>Tools</span>
+      </div>
+    </div>
+   <a href="product.html?id=12" class="card-link" onclick="event.stopPropagation()">Explore all gifts</a>
+     </div>
+    <div class="card clickable-card" onclick="window.location.href='fashion.html'">
+  <h3>Spring essentials</h3>
+    <div class="quad-grid">
+      <div class="quad-item">
+        <img src="images/LSS23_SPRING_DT_CAT_CARD_1_x1._SY116_CB595261253_.jpg" alt="">
+        <span>Clothing</span>
+      </div>
+      <div class="quad-item">
+        <img src="images/LSS23_SPRING_DT_CAT_CARD_2_x1._SY116_CB595261253_.jpg" alt="">
+        <span>Shoes</span>
+      </div>
+      <div class="quad-item">
+        <img src="images/LSS23_SPRING_DT_CAT_CARD_3_x1._SY116_CB595261253_.jpg" alt="">
+        <span>Bags</span>
+      </div>
+      <div class="quad-item">
+        <img src="images/LSS23_SPRING_DT_CAT_CARD_4_x1._SY116_CB595261253_.jpg" alt="">
+        <span>Accessories</span>
+      </div>
+    </div>
+   <a href="fashion.html" class="card-link" onclick="event.stopPropagation()">Shop the sale</a>
+     </div>
+   <div class="card clickable-card" onclick="window.location.href='product.html?id=2'">
+     <h3>Deals on Electronics</h3>
+     <div class="card-img-container">
+       <img src="images/product_headset.jpg" alt="headphones">
+     </div>
+     <a href="product.html?id=2" class="card-link" onclick="event.stopPropagation()">Shop deals</a>
+   </div>
+    <div class="card clickable-card" onclick="window.location.href='product.html?id=3'">
+      <h3>Footwear styles</h3>
+      <div class="card-img-container">
+        <img src="images/product_shoes.jpg" alt="shoes">
+      </div>
+      <a href="product.html?id=3" class="card-link" onclick="event.stopPropagation()">Explore more</a>
+    </div>
+  </div>
+  <br><br>
+  <div class="slider-container" style="margin-left: 22px; margin-right: 25px; padding-left: 18px;">
+    <h3>Inspired by your browsing history</h3>
+    <div class="slider-items">
+      <img src="images/61CEwh+UVuL._AC_SY200_.jpg" alt="">
+      <img src="images/61Gvw0-b0eL._AC_SY200_.jpg" alt="">
+      <img src="images/61UEXxKIlrL._AC_SY200_.jpg" alt="">
+      <img src="images/61o6SkL3DOL._AC_SY200_.jpg" alt="">
+      <img src="images/61qm+2koyBL._AC_SY200_.jpg" alt="">
+      <img src="images/61s+DOVawZL._AC_SY200_.jpg" alt="">
+      <img src="images/7194yVwYXFL._AC_SY200_.jpg" alt="">
+      <img src="images/71Si2QlAb3L._AC_SY200_.jpg" alt="">
+      <img src="images/71kHwy9jklL._AC_SY200_.jpg" alt="">
+      <img src="images/71lylM-9P4L._AC_SY200_.jpg" alt="">
+      <img src="images/71oERUaDzWL._AC_SY200_.jpg" alt="">
+      <img src="images/81331aSHcAL._AC_SY200_.jpg" alt="">
+      <img src="images/51IKhgxg03L._AC_SY200_.jpg" alt="">
+    </div>
+  </div>
+  <br>
+  </main>
+  <footer>
+    <a href="#" class="back-to-top">Back to top</a>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Get to Know Us</h4>
+        <ul>
+          <li><a href="help.html">Careers</a></li>
+          <li><a href="help.html">Blog</a></li>
+          <li><a href="help.html">About Amazon</a></li>
+          <li><a href="help.html">Investor Relations</a></li>
+          <li><a href="help.html">Amazon Devices</a></li>
+          <li><a href="help.html">Amazon Science</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Make Money with Us</h4>
+        <ul>
+          <li><a href="gaming.html">Sell products on Amazon</a></li>
+          <li><a href="gaming.html">Sell on Amazon Business</a></li>
+          <li><a href="gaming.html">Sell apps on Amazon</a></li>
+          <li><a href="deals.html">Become an Affiliate</a></li>
+          <li><a href="deals.html">Advertise Your Products</a></li>
+          <li><a href="deals.html">Self-Publish with Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" style="margin-left: 15px;">
+        <h4>Amazon Payment Products</h4>
+        <ul>
+          <li><a href="help.html">Amazon Business Card</a></li>
+          <li><a href="help.html">Shop with Points</a></li>
+          <li><a href="help.html">Reload Your Balance</a></li>
+          <li><a href="help.html">Amazon Currency Converter</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Let Us Help You</h4>
+        <ul>
+          <li><a href="help.html">Amazon and COVID-19</a></li>
+          <li><a href="signin.html">Your Account</a></li>
+          <li><a href="orders.html">Your Orders</a></li>
+          <li><a href="help.html">Shipping Rates &amp; Policies</a></li>
+          <li><a href="help.html">Returns &amp; Replacements</a></li>
+          <li><a href="help.html">Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-selects">
+      <center>
+        <img src="amazon_logo.svg" class="footer-logo" alt="amazon">
+      </center>
+      <div class="select-btn">
+        <span>English</span>
+      </div>
+      <div class="select-btn">
+        <span>$ USD - U.S. Dollar</span>
+      </div>
+      <div class="select-btn">
+        <img src="icons/flag_in.svg" style="width: 18px; margin-right: 5px;" alt="india">
+        <span>India</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="services-grid">
+        <div class="service-item">
+          <h5>Amazon Music</h5>
+          <span>Stream millions of songs</span>
+        </div>
+        <div class="service-item">
+          <h5>Amazon Ads</h5>
+          <span>Reach customers</span>
+        </div>
+        <div class="service-item">
+          <h5>6pm</h5>
+          <span>Score deals on fashion</span>
+        </div>
+        <div class="service-item">
+          <h5>AbeBooks</h5>
+          <span>Books, art &amp; collectibles</span>
+        </div>
+        <div class="service-item" style="align-self: flex-end;">
+          <h5>ACX</h5>
+          <span>Audiobook Publishing Made Easy</span>
+        </div>
+        <div class="service-item">
+          <h5>Sell on Amazon</h5>
+          <span>Start a Selling Account</span>
+        </div>
+        <div class="service-item">
+          <h5>Veeqo</h5>
+          <span>Shipping Software Inventory</span>
+        </div>
+      </div>
+      <div class="legal-links">
+        <a href="help.html">Conditions of Use</a>
+        <a href="help.html">Privacy Notice</a>
+        <a href="help.html">Your Ads Privacy Choices</a>
+      </div>
+      <div class="copyright">
+        &copy; 1996-2026, Amazon.com, Inc. or its affiliates
+      </div>
+      <div class="made-by">Made by Priyanshu Gupta</div>
+    </div>
+  </footer>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
